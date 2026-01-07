@@ -1,0 +1,568 @@
+/* About Page */
+.about-page {
+  background-color: var(--background-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin-top: -180px;
+}
+
+/* Hero Section */
+.about-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 5% 100px;
+  margin-top: 0px;
+  padding-top: 140px;
+  position: relative;
+  overflow: hidden;
+  background: url('../../public/image/about-hero.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+}
+
+/* Dark overlay for better text readability */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 30, 0.85) 0%,
+    rgba(26, 26, 46, 0.75) 50%,
+    rgba(15, 15, 30, 0.85) 100%
+  );
+  z-index: 0;
+}
+
+.about-hero-content {
+  max-width: 1200px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(233, 176, 0, 0.2);
+  border: 1px solid rgba(233, 176, 0, 0.3);
+  border-radius: 50px;
+  color: var(--accent-gold);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+
+.about-hero h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 25px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Hero Background Animation */
+.hero-bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233, 176, 0, 0.3) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+.circle-1 {
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  right: -150px;
+}
+
+.circle-2 {
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  left: -100px;
+}
+
+/* Story Section */
+.story-section {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.story-content h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.story-text {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.story-image {
+  position: relative;
+}
+
+.story-image-placeholder {
+  width: 100%;
+  height: 500px;
+  background: url('../../public/image/our.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  position: relative;
+  opacity: 0.8;
+}
+
+.story-image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(233, 176, 0, 0.1) 0%, transparent 100%);
+}
+
+.image-icon {
+  color: var(--accent-gold);
+  opacity: 0.3;
+}
+
+/* Vision Section */
+.vision-section {
+  padding: 100px 5%;
+  background: linear-gradient(180deg, var(--background-dark) 0%, #0f0f1e 100%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.vision-card {
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(42, 42, 62, 0.6) 0%, rgba(26, 26, 46, 0.8) 100%);
+  border: 1px solid rgba(233, 176, 0, 0.3);
+  border-radius: 25px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.vision-card:hover {
+  border-color: var(--accent-gold);
+  transform: translatex(10px);
+}
+
+.vision-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 50px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #ffd700 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-dark);
+ 
+}
+
+.vision-card h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.vision-card p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+/* Values Section */
+.values-section {
+  padding: 60px 5%;
+  background: linear-gradient(180deg, var(--background-dark) 0%, #0f0f1e 100%);	
+
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.value-card {
+  padding: 30px 20px;
+  background: linear-gradient(135deg, rgba(42, 42, 62, 0.6) 0%, rgba(26, 26, 46, 0.8) 100%);
+  border: 1px solid rgba(233, 176, 0, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  border-color: var(--accent-gold);
+ 
+}
+
+.value-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(233, 176, 0, 0.1);
+  border: 2px solid var(--accent-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  margin-bottom: 25px;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 80px 5%;
+  background: linear-gradient(180deg, var(--background-dark) 0%, #0f0f1e 100%);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  text-align: center;
+  padding: 35px 20px;
+  background: linear-gradient(135deg, rgba(233, 176, 0, 0.1) 0%, rgba(233, 176, 0, 0.05) 100%);
+  border: 2px solid var(--accent-gold);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+
+  transform: translateY(-5px);
+}
+
+.achievement-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #ffd700 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-dark);
+
+}
+
+.achievement-card h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+  text-shadow: 0 0 25px rgba(233, 176, 0, 0.5);
+}
+
+.achievement-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.achievement-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .story-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+	padding: 10px 5%;
+  }
+
+  .story-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .vision-section {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 70vh;
+    padding: 120px 5% 80px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .story-content h2 {
+    font-size: 2rem;
+  }
+
+  .story-text {
+    font-size: 1rem;
+  }
+
+  .story-image-placeholder {
+    height: 350px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .vision-card {
+    padding: 35px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .achievement-card {
+    padding: 25px 15px;
+  }
+
+  .achievement-card h3 {
+    font-size: 2rem;
+  }
+
+  .achievement-label {
+    font-size: 0.9rem;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+  }
+
+  .timeline-marker {
+    grid-column: 1 !important;
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .timeline-content {
+    grid-column: 2 !important;
+    text-align: left !important;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .vision-card {
+    padding: 30px 20px;
+  }
+
+  .vision-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .value-card {
+    padding: 30px 20px;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .achievement-card {
+    padding: 20px 10px;
+  }
+
+  .achievement-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .achievement-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .achievement-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .achievement-label {
+    font-size: 0.85rem;
+  }
+
+  .achievement-desc {
+    font-size: 0.75rem;
+  }
+
+  .timeline-marker {
+    width: 50px;
+    height: 50px;
+    font-size: 0.9rem;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+
+  .achievement-card h3 {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+}

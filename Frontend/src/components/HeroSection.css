@@ -1,0 +1,177 @@
+/* Ensure these variables are defined in your global or Navbar.css file */
+:root {
+  --background-dark: #1a1a2e;
+  --text-primary: #ffffff;
+  --accent-gold: #e9b000;
+  --button-hover: #ffc41c;
+  --card-dark: #2a2a3e;
+}
+
+/* Hero Section Styles */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 5% 50px; /* Space below Navbar */
+    background: url('../../public/image/hero2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-primary);
+    min-height: 110vh;
+    overflow: hidden; /* Required for animations */
+    margin-top: -180px;
+    padding-top: 300px;
+    position: relative;
+    z-index: 11;
+}
+
+/* Enhanced overlay with more sophisticated gradient */
+.hero-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 15, 30, 0.85) 0%,
+        rgba(26, 26, 46, 0.75) 50%,
+        rgba(15, 15, 30, 0.85) 100%
+    );
+    z-index: 0;
+    /* Add subtle animation to the overlay */
+    animation: overlayShift 8s ease-in-out infinite;
+}
+
+/* Animation for overlay */
+@keyframes overlayShift {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 800px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-size: 4rem; /* Premium, bold font */
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-weight: 800;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      
+    text-align: left;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-btn {
+    background-color: var(--accent-gold);
+    border: none;
+    padding: 15px 30px; /* Slightly larger button */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--background-dark);
+    transition: background-color 0.3s ease;
+}
+
+.learn-more {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.hero-image-placeholder {
+    width: 500px;
+    height: 400px;
+    background: url('../../public/image/logo3.png') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    /* Deep shadow effect */
+    position: absolute;
+    top: 35%;
+    left: 60%;
+
+    z-index: 101;
+
+}
+.hero-image-placeholder:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  transform: translateX(5px);
+  transform: scale(1.05);
+
+}
+.highlighted-text {
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 200px 5% 100px;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-image-placeholder {
+        margin-top: 20px;
+        height: 250px;
+        width: 80%;
+        left: 0%;
+        position: relative;
+        
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+        padding-top: 100px;
+        line-height: 1.1;
+    }
+    .hero-content p{
+        font-size: 1.1rem;
+        padding-top: 0px;
+        line-height: 1.6;
+    }
+}
+@media (max-width: 480px) {
+	.hero-content h1 {
+		font-size: 2rem;
+	}
+	.hero-content p {
+		font-size: 1rem;
+	}
+	.contact-btn {
+		padding: 12px 25px;
+		font-size: 0.9rem;
+	}
+	.learn-more {
+		font-size: 1rem;
+	}
+}

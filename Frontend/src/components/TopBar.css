@@ -1,0 +1,26 @@
+.top-bar-container {
+  background-color: var(--card-dark); /* Navbar से थोड़ा हल्का शेड */
+  color: var(--text-primary);
+  padding: 10px 5%;
+  font-size: 0.8rem;
+  z-index: 1001; /* सुनिश्चित करें कि यह Navbar के ऊपर रहे */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+  position: relative;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: flex-end; /* दाईं ओर अलाइन करें */
+  gap: 40px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-info .icon {
+  color: var(--accent-gold);
+}

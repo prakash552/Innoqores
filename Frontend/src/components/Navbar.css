@@ -1,0 +1,222 @@
+/* सुनिश्चित करें कि आपके पास ये वैरियेबल्स main CSS फ़ाइल में परिभाषित हैं */
+/* 
+  :root {
+    --background-dark: #1a1a2e;
+    --text-primary: #ffffff;
+    --accent-gold: #e9b000;
+    --button-hover: #ffc41c;
+    --card-dark: #2a2a3e;
+  }
+*/
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0px 5%;
+  background-color: transparent;
+  color: var(--text-primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  min-height: 60px;
+  margin-top: -20px;
+
+}
+
+
+/* Scrolled State - Solid background */
+.navbar-container.scrolled {
+  background-color: var(--background-dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding-top: -20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 170px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  margin-top: -20px;
+
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links li a {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin: 0 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+.mobile-btn {
+    background-color: var(--accent-gold);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--background-dark);
+  margin-top: 0px;
+  padding: 10px 20px;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-gold);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a.active {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.nav-links li a.active::after {
+  width: 100%;
+}
+.admin-btn {
+  background-color: var(--accent-gold);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--background-dark);
+  margin-top: 0px;
+  padding: 10px 20px;
+}
+.contact-btn {
+  background-color: var(--accent-gold);
+  border: 1px solid var(--background-dark);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--background-dark);
+  margin-top: 0px;
+}
+
+/* Mobile Toggle */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  margin-top: 0px;
+  padding: 10px;
+  z-index: 1001;
+}
+
+/* Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Drawer */
+.mobile-menu-drawer {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  background-color: var(--card-dark);
+  padding: 60px 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: var(--accent-gold);
+  cursor: pointer;
+  z-index: 3000;
+}
+
+/* Mobile Links */
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav-links li {
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-links li a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-links li a.active {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.mobile-btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-menu,
+  .desktop-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+	
+  }
+  .navbar-container {
+    padding: 0px 5%;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-overlay {
+    display: none;
+  }
+}

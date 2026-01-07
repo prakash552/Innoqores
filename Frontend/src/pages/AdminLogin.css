@@ -1,0 +1,215 @@
+/* Admin Login Page */
+.admin-login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f1e 0%, var(--background-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(233, 176, 0, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.admin-login-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+.admin-login-container {
+  background: linear-gradient(135deg, var(--card-dark) 0%, #2a2a3e 100%);
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(233, 176, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-login-header {
+  margin-bottom: 40px;
+}
+
+.admin-login-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #e9b000 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--background-dark);
+}
+
+.admin-login-header h1 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.admin-login-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.admin-login-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 35px;
+  top: 30%;
+  transform: translateY(-15%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 5px;
+}
+
+.toggle-password:hover {
+  color: var(--accent-gold);
+}
+
+.error-message {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff4444;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #e9b000 100%);
+  color: var(--background-dark);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(233, 176, 0, 0.3);
+}
+
+.login-hint {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+.login-hint p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.login-hint p strong {
+  color: var(--accent-gold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-login-container {
+    padding: 30px;
+    margin: 20px;
+  }
+  
+  .admin-login-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-login-container {
+    padding: 25px 20px;
+  }
+  
+  .admin-login-header {
+    margin-bottom: 30px;
+  }
+  
+  .admin-login-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .admin-login-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .input-wrapper input {
+    padding: 12px 12px 12px 40px;
+  }
+  
+  .login-button {
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
