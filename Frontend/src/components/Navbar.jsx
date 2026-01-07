@@ -54,7 +54,8 @@ const Navbar = () => {
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
        <Link to="/" className="logo">
-         <img src="../../public/image/logo3.png" alt="Innovate Logo" />
+         <img src="/image/logo3.png" alt="innoqores" /> 
+
        </Link>
 
         {/* Desktop Menu */}
