@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
+import logoSrc from '../../public/image/logo3.png'; 
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -54,7 +55,7 @@ const Navbar = () => {
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
        <Link to="/" className="logo">
-         <img src="/image/logo3.png" alt="innoqores" /> 
+        <img src={logoSrc} alt="innoqores" />
 
        </Link>
 
