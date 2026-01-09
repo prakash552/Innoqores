@@ -11,25 +11,25 @@ const Stats = () => {
   const statsData = [
     {
       id: 1,
-      number: '500+',
+      number: '10+',
       label: 'Projects Completed',
       direction: 'left'
     },
     {
       id: 2,
-      number: '100+',
+      number: '10+',
       label: 'Happy Clients',
       direction: 'right'
     },
     {
       id: 3,
-      number: '50+',
+      number: '15+',
       label: 'Team Members',
       direction: 'left'
     },
     {
       id: 4,
-      number: '10+',
+      number: '1+',
       label: 'Years Experience',
       direction: 'right'
     }

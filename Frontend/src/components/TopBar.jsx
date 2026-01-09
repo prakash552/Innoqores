@@ -14,7 +14,7 @@ const TopBar = () => {
       <div className="top-bar-content">
         <div className="contact-info">
           <Phone size={14} className="icon" />
-          <span>+91-9773036649</span> 
+          <span>+91- 72195 98132</span> 
         </div>
         <div className="contact-info">
           <Mail size={14} className="icon" />

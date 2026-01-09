@@ -155,7 +155,7 @@ const Footer = () => {
                 whileHover={{ x: 5 }}
               >
                 <Phone size={18} className="contact-icon" />
-                <a href="tel:+91 9773036649">+91 9773036649</a>
+                <a href="tel:+91 72195 98132 ">+91 72195 98132</a>
               </motion.div>
               <motion.div 
                 className="contact-item"

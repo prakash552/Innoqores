@@ -1,11 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
+ <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
+
+    <!-- 1. Apple iPhone ke liye (Sabse best quality 180x180 hoti hai) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
+
+    <!-- 2. Android aur Chrome ke liye bade icons (192x192 aur 512x512) -->
+    <link rel="icon" type="image/png" sizes="502x502" href="/logoz.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+
+    <!-- 3. Browser Tab ke liye (Standard size) -->
+    <link rel="icon" type="image/png" sizes="302x302" href="/logo.png">
+    
+    <link rel="manifest" href="/site.webmanifest">
+    <title>innoqores.com</title>
+</head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

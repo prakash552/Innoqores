@@ -1,6 +1,6 @@
 /* Services Section Styles */
 .services-section {
-  padding: 40px 5%;
+  padding: 40px 3%;
   background: linear-gradient(180deg, var(--background-dark) 0%, #0f0f1e 100%);
   color: var(--text-primary);
   position: relative;
@@ -36,7 +36,7 @@
 /* Services Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 30px;
   margin-bottom: 60px;
 }
@@ -44,14 +44,14 @@
 /* Service Card */
 .service-card {
   background: linear-gradient(145deg, rgba(42, 42, 62, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
-  padding: 20px 30px;
+  padding: 10px 20px;
   border-radius: 20px;
   border: 2px solid rgba(233, 176, 0, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  height: 420px;
+  height: 400px;
 }
 
 .service-card::before {
