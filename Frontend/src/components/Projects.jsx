@@ -28,35 +28,27 @@ const Projects = () => {
       technologies: ['React Native', 'Firebase', 'Redux'],
       liveLink: '#'
     },
+
     {
       id: 3,
-      title: 'AI Content Generator',
-      category: 'Web Development',
-      description: 'AI-powered platform for generating marketing content, blog posts, and social media captions.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
-      technologies: ['Next.js', 'OpenAI API', 'PostgreSQL'],
-      liveLink: '#'
+      title: 'Fitness website',
+      category: 'web Development',
+      description: 'its a coustomer fitness website for personal used',
+      image: 'https://images.unsplash.com/photo-1688521010985-4cd76e4fcfde?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGd5bSUyMHBvc3RlcnxlbnwwfHwwfHx8MA%3D%3D',
+      technologies: ['React', 'MongoDB', 'Node.js'],
+      liveLink: 'https://my-gym-adm1.onrender.com '
     },
     {
       id: 4,
-      title: 'Fitness Tracking App',
-      category: 'App Development',
-      description: 'Comprehensive fitness app with workout plans, nutrition tracking, and progress analytics.',
-      image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop',
-      technologies: ['Flutter', 'Firebase', 'HealthKit'],
-      liveLink: '#'
-    },
-    {
-      id: 5,
       title: 'Real Estate Portal',
       category: 'Web Development',
       description: 'Property listing platform with virtual tours, mortgage calculator, and agent management.',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
       technologies: ['React', 'Express', 'MySQL'],
-      liveLink: '#'
+      liveLink: 'https://realstate-yowr.onrender.com'
     },
     {
-      id: 6,
+      id: 5,
       title: 'Social Media Dashboard',
       category: 'Digital Marketing',
       description: 'Unified dashboard for managing multiple social media accounts and analytics.',
